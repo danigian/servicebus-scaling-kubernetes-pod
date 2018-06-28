@@ -54,11 +54,11 @@ spec:
           value:  nginx
         - name:  kubernetesNamespace
           value:  default
-        - name:  pollInterval
+        - name:  pollInterval #in seconds
           value:  3
-        - name:  scaleOutCoolDown
+        - name:  scaleOutCoolDown #in seconds
           value:  10
-        - name:  scaleInCoolDown
+        - name:  scaleInCoolDown #in seconds
           value:  10
         - name:  maxPods
           value:  10
