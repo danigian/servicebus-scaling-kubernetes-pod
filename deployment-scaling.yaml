@@ -1,0 +1,46 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name:  servicebus-scaling-kubernetes-pod
+  labels:
+    name:  servicebus-scaling-kubernetes-pod
+spec:
+  template:
+    metadata:
+      labels:
+        app:  servicebus-scaling-kubernetes-pod
+    spec:
+      containers:
+      - image:  danigian/servicebus-scaling-kubernetes-pod:latest
+        name:  servicebus-scaling-kubernetes-pod
+        env:
+        - name:  tenantId
+          value:  ENVVARVALUE
+        - name:  clientId
+          value:  ENVVARVALUE
+        - name:  clientSecret
+          value:  ENVVARVALUE
+        - name:  subscriptionId
+          value:  ENVVARVALUE
+        - name:  resourceGroupName
+          value:  sbrg
+        - name:  namespaceName
+          value:  damaggio
+        - name:  topicName
+          value:  mytopic
+        - name:  subscriptionName
+          value:  mysubscription
+        - name:  kubernetesDeploymentName
+          value:  nginx
+        - name:  kubernetesNamespace
+          value:  default
+        - name:  pollInterval
+          value:  3
+        - name:  scaleOutCoolDown
+          value:  10
+        - name:  scaleInCoolDown
+          value:  10
+        - name:  maxPods
+          value:  10
+        - name:  minPods
+          value:  1

@@ -1,0 +1,16 @@
+{
+  "name": "servicebus-scaling-kubernetes-pod",
+  "version": "1.0.0",
+  "description": "Sample pod scaler based on Service Bus Subscription active messages counter",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "danigian",
+  "license": "ISC",
+  "dependencies": {
+    "azure-arm-sb": "^2.2.0-preview",
+    "ms-rest-azure": "^2.5.7",
+    "@kubernetes/client-node": "^0.3.0"
+  }
+}
