@@ -9,8 +9,8 @@
   "author": "danigian",
   "license": "ISC",
   "dependencies": {
-    "azure-arm-sb": "^2.2.0-preview",
-    "ms-rest-azure": "^2.5.7",
-    "@kubernetes/client-node": "^0.3.0"
+    "azure-arm-sb": "3.1.0",
+    "ms-rest-azure": "2.6.0",
+    "@kubernetes/client-node": "0.8.2"
   }
 }
